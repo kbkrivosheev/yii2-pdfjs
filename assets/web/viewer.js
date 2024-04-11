@@ -3909,7 +3909,7 @@ var PDFPageView = (function PDFPageViewClosure() {
       var wmCanvas = document.createElement("canvas");
             wmCanvas.width = canvas.width;
             wmCanvas.height = canvas.height;
-            wmCanvas.setAttribute("style","position:absolute;border:1px solid black")
+            wmCanvas.setAttribute("style","position:absolute;")
             var wmContext = wmCanvas.getContext('2d');
             wmContext.globalAlpha = WATERMARK_ALPHA;
             // setup text for filling
