@@ -55,6 +55,22 @@ var MAX_AUTO_SCALE = 1.25;
 var SCROLLBAR_PADDING = 40;
 var VERTICAL_PADDING = 5;
 
+/**
+ * Disable context menu by right clicking. Disable suggestion and copy text.
+ */
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+  return false;
+});
+document.addEventListener('copy', function(e) {
+  e.preventDefault();
+  return false;
+});
+document.addEventListener('selectstart', function(e) {
+  e.preventDefault();
+  return false;
+});
+
 function getFileName(url) {
   var anchor = url.indexOf('#');
   var query = url.indexOf('?');
